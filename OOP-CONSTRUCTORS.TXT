@@ -1,0 +1,37 @@
+CONSTRUCTOR method
+.....................................
+-gets called automatically when a new instance on an object is created
+
+-does NOT have a return type
+
+-name of the Constructor MUST be the same as the class it belongs to
+
+==========================================
+==========================================
+
+OVERLOADING TECHNIQUE:
+    *** can be used on ANY method ***
+
+-Defining new method signatures for the same method name
+-allow multiple ways to instantiate our objects
+
+ex:
+-------------------------------------
+class Vehicle {
+    private int numberOfWheels;
+    private String color;
+    
+    // ex. new Vehicle()
+    public Vehicle() {
+    }
+    // ex. new Vehicle("someColor")    
+    public Vehicle(String color) {
+        // setting the color attribute to the value from the color parameter
+        this.color = color;
+    }
+    
+    // ex. new Vehicle("someColor", 4)    
+    public Vehicle(String color, int num) {
+        this.color = color;
+        this.numberOfWheels = num;
+    }

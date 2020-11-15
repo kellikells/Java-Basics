@@ -1,0 +1,64 @@
+METHODS:
+    -MODIFIERS
+    -RETURN TYPE
+    -METHOD NAME
+    -METHOD BODY
+
+==========================================
+==========================================
+MODIFIERS:
+
+1-private: 
+    only the class it is declared in has access to it (most restricted)
+
+2-protected:
+    subclasses have access, but nonrelated classes cannot
+
+3-public:
+    every class everywhere has access
+
+4-static:
+    CLASS METHOD : invoked without reference to an object
+    - creates constants and class fields that need to be used throughout a program
+    
+    "does it make sense to call this method, even if an object has not been constructed yet?"
+
+
+
+
+===========================================
+RETURN TYPES:
+
+1-String
+2-int
+3-double
+4-boolean
+5-void
+
+==========================================
+METHOD NAME:
+(depend on the return type)
+
+ask a question - boolean 
+    <ex: isEmpty(?)>
+
+
+    GETTERS or SETTERS
+    GETTERS: have a return
+    SETTERS: don't need to return (so use type <void>)
+get or set  - property values
+    <ex: getValue()> <setValue()>
+
+verb
+    <greet()>   <createGreeting()>
+    <addToList()>
+
+
+==========================================
+if parameters: must include datatype required for the parameters
+
+
+METHOD BODY
+    what to do when method is called
+
+++++++++++++++++++++++++++++++++++

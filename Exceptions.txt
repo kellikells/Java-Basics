@@ -1,0 +1,89 @@
+EXCEPTION
+
+:::event that disrupts the normal flow of the program during execution
+
+1-THROWING AN EXCEPTION:
+    2-the method creates an EXCEPTION OBJECT (type & state)> gives it to the runtime system
+
+3-runtime system goes through CALL STACK to search for EXCEPTION HANDLER method
+    - appropriate exception handler: matches the TYPE of the EXCEPTION OBJECT
+            TYPE exception handler = TYPE exception object
+
+            4a- "catch the exception" : if an exception handler found
+                    EXCEPTION HANDLER can: 
+                        1- print error messages
+                        2- halt the program
+                        3- error recovery
+                        4- prompt user to make a decision
+                        5- propogate the error up to a higher-level handler (through chained exceptions)
+            4b- no exception handler found: runtime system terminates
+========================================================
+3 EXCEPTIONS:
+
+1- CHECKED EXCEPTION                all exceptions except for #2,#3
+    -Catch or Specify Requirement*
+
+2- ERROR                    indicated by: [Error]
+    -EXTERNAL to the application (usually cannot anticipate nor recover from)
+
+3- RUNTIME EXCEPTION        indicated by: [RuntimeException]
+    -INTERNAL to the application 
+    -usually programming BUGS (ex: logic error, improper use of API)
+
+========================================================
+
+TRY block   
+
+try {
+    } catch (ExceptionType name) {
+
+    } catch (ExceptionType name) {
+
+    }
+
+========================================================
+
+
+CATCH block(s)
+    -ExceptionType : from the THROWABLE class
+    -name : how the catch block handler refers to the exception
+    -can handle MORE than 1 type of exception:
+
+            catch (IOException|SQLException ex) {
+                logger.log(ex);
+                throw ex;
+            }
+
+
+========================================================
+FINALLY block
+    -executes when TRY block exits
+    -key to preventing resource leaks 
+    -(ensure resource is always recovered)
+
+
+========================================================
+
+
+
+
+
+========================================================
+
+TRY/CATCH
+
+class DeliverMessage{
+    public static void main(String[] args){
+        UnreliableFriend friend = new UnreliableFriend();
+        try{
+            friend.deliverMessage();
+            System.out.println("The message was delivered!");
+        } catch (OutOfGasException e){
+            System.out.println("Hey, uh, so, I ran out of gas..");
+            // back-up plan here.
+        }
+    }
+}
+
+
+========================================================

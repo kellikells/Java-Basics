@@ -1,0 +1,39 @@
+THIS keyword:
+
+    refers to the current object, 
+        within the context on an Instance method or Constructor
+    
+    use THIS to refer to any member variable of the current object
+==========================================
+
+
+MUST use THIS:
+    when a Parameter Variable shares the same name as one of the Member Variables
+
+==========================================
+This, can be used for Constructor Overloading:
+ex:
+----------------
+public class Person {
+    private int age;
+    private int cmHeight;
+    private String name;
+    public Person() {
+        this(20, "John Doe", 171);
+    }
+    
+    public Person(int age, String name, int cmHeight) {
+        this.age = age;
+        this.name = name;
+        this.cmHeight = cmHeight;
+    }
+==========================================
+the OBJECT class is a SUPERCLASS 
+(at the top of class Hierarchy)
+
+use THIS to access Object methods
+
+common methods from the Object class:
+    .getClass()
+    .equals()
+    .toString()

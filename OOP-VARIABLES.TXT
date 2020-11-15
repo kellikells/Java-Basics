@@ -1,0 +1,23 @@
+
+* 3 different types of variables possible in a Java class:
+==========================================
+==========================================
+
+1-MEMBER variables 
+
+***(usually private)
+
+-object Attributes || Fields || Instance variables
+-usually declared insider the class BEFORE any method
+
+**accessed via GETTER and SETTER methods
+
+==========================================
+
+2-LOCAL variables
+    -variables in method/code blocks
+==========================================
+
+3-PARAMETER variables
+    -variables declared in your method
+
